@@ -1,2 +1,2 @@
 # python_bootcamp_w1
-Week 1exercises.
+Week 1 exercises.
