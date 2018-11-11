@@ -34,12 +34,11 @@ def rotLeft(a, d):
 	return new_array   	 
 
 
-# I've manually applied all test cases proposed on HackerRanck site and they're passed sucessfully. It seems like there is an issue
+# I've manually applied all test cases proposed on HackerRank site and they're passed sucessfully. It seems like there is an issue
 # with the array used in the site since it ends with "{TRUNCATED}".
 # For running and testing this code in your own IDE, copy it and uncomment the last three lines. Remember the first number in "querys" list
 # represents the number of querys that will be executed.
 # 4. freqQuery
-
 def freqQuery(querys):
    array =[]
    output=[]
