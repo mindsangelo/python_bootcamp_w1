@@ -34,27 +34,36 @@ def rotLeft(a, d):
 	return new_array   	 
 
 
-
-# 4. Frequency Queries
+# I've manually applied all test cases proposed on HackerRank site and they're passed sucessfully. It seems like there is an issue
+# with the array used in the site since it ends with "{TRUNCATED}".
+# For running and testing this code in your own IDE, copy it and uncomment the last three lines. Remember the first number in "querys" list
+# represents the number of querys that will be executed.
+# 4. freqQuery
 def freqQuery(querys):
    array =[]
+   output=[]
    cont=0
-   for i in range(0, len(querys), 2):
+   for i in range(1, len(querys), 2):
+       if(querys[i]==1):
+           array.append(querys[i+1])
+
+       if(querys[i]==2):  
+           if(querys[i+1] in array):
+               array.remove(querys[i+1])
+
        if(querys[i]== 3):
            for j in range(len(array)):
-               if array.count(array[j]) == querys[i+1]:
+               if(array.count(array[j]) == querys[i+1]):
                    cont+= 1
            if cont > 0:
-               array.append(1)
+               output.append(1)
            else:
-               array.append(0)
-   return array
+               output.append(0)
+   return output
 
-querys = [1,5,1,6,3,2,1,10,1,10,1,6,2,5,3,2]
-
-res = freqQuery(querys)
-print(res)
-
+#querys = [10,1,3,2,3,3,2,1,4,1,5,1,5,1,4,3,2,2,4,3,2]
+#res = freqQuery(querys)
+#print(res)
 
 
 
